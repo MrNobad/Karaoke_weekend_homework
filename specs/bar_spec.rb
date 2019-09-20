@@ -1,8 +1,8 @@
 require("minitest/autorun")
 require('minitest/rg')
-require_relative("../bar")
-require_relative("../drinks")
-require_relative("../guests")
+require_relative("../bar.rb")
+require_relative("../drinks.rb")
+require_relative("../guests.rb")
 
 class PubTest < MiniTest::Test
 
@@ -11,7 +11,7 @@ class PubTest < MiniTest::Test
     @drink2 = Drinks.new("Martini", 6.00)
     @drink3 = Drinks.new("Whisky", 7.00)
     @bar = Bar.new(200.00)
-    @guests = Guests.new("", 10.00)
+    @guests = Guests.new("", 10.00, "Disco")
   end
 
   def test_pub_has_till
@@ -19,15 +19,14 @@ class PubTest < MiniTest::Test
   end
 
   def test_can_add_drinks
-    @bar.add_drink(@drink1)
-    assert_equal(1, @bar.drink_count)
-  end
+   @bar.add_drink(@drink1)
+   assert_equal(1, @bar.drink_count)
+ end
 
   def test_pub_can_serve_drink
-    @bar.add_drink(@drink1)
     @bar.add_drink(@drink2)
-    @bar.serve(@guests, @drink1)
-    assert_equal(5.00, @guests.wallet())
+    @bar.serve(@guests, @drink2)
+    assert_equal(6.00, @guests.wallet())
     assert_equal(205.00, @bar.till())
     assert_equal(1, @bar.drink_count)
   end
