@@ -9,7 +9,6 @@ attr_reader :till
 
   end
 
-
   def drink_count
     return @drinks.count
   end
