@@ -27,10 +27,10 @@ class PubTest < MiniTest::Test
     @bar.add_drink(@drink1)
     @bar.add_drink(@drink2)
     @bar.serve(@guests, @drink1)
-    assert_equal(8.00, @guests.wallet())
-    assert_equal(102.00, @bar.till())
+    assert_equal(5.00, @guests.wallet())
+    assert_equal(205.00, @bar.till())
     assert_equal(1, @bar.drink_count)
   end
 
 
-  end
+end

@@ -1,4 +1,4 @@
-class Drink
+class Drinks
 
   attr_reader :name, :price
 

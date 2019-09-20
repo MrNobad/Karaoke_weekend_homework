@@ -2,10 +2,10 @@ require("minitest/autorun")
 require('minitest/rg')
 require_relative("../drinks.rb")
 
-class DrinkTest < MiniTest::Test
+class DrinksTest < MiniTest::Test
 
   def setup
-    @drink = Drink.new("Lager", 5.00)
+    @drink = Drinks.new("Lager", 5.00)
   end
 
   def test_drink_has_name

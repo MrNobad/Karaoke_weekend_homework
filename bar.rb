@@ -1,7 +1,7 @@
 class Bar
- def initialize(drinks, till)
+  def initialize(drinks, till)
 
-   @till = till
-   @drinks = []
-
+    @till = till
+    @drinks = []
+  end
 end
