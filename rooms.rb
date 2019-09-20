@@ -20,6 +20,9 @@ class Room
     @guests.push(guest)
   end
 
+  def remove_guest(guest)
+    @guests.unshift(guest)
+  end
 
 
 end
