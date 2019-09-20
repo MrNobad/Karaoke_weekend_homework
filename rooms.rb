@@ -21,7 +21,7 @@ class Room
   end
 
   def remove_guest(guest)
-    @guests.unshift(guest)
+    @guests.delete(guest)
   end
 
 

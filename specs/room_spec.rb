@@ -27,15 +27,18 @@ class RoomTest < MiniTest::Test
   end
 
   def test_room_can_add_guest
-     @disco_balls.add_guest(@guest1)
-     @disco_balls.add_guest(@guest2)
-     assert_equal(2, @disco_balls.guests.length)
+    @disco_balls.add_guest(@guest1)
+    @disco_balls.add_guest(@guest2)
+    assert_equal(2, @disco_balls.guests.length)
   end
 
   def test_room_can_remove_guest
-     @disco_balls.remove_guest(@guest1)
-     assert_equal(1, @disco_balls.guests.length)
+    @disco_balls.add_guest(@guest1)
+    @disco_balls.add_guest(@guest2)
+    @disco_balls.remove_guest(@guest1)
+    assert_equal(1, @disco_balls.guests.length)
   end
+
 
 
 end
