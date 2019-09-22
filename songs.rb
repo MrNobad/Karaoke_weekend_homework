@@ -7,5 +7,7 @@ class Songs
     @song_name = song_name
     @genre = genre
 
+    # @songs = { song_name, genre }
+
   end
 end

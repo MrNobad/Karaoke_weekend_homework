@@ -11,8 +11,10 @@ class SongsTest < MiniTest::Test
     @song2 = Songs.new("Itsy Bitsy", "Pop")
     @song3 = Songs.new("Stairway to Heven", "Rock")
 
+    # @songs = Songs.new( { @song1, @song2, @song3 } )
+
     @guests = Guests.new("Madonna", 50, "Disco")
-    @room = Room.new("Disco Balls", "", "Disco", 10)
+    @room = Room.new("Disco Balls", "", "Disco", 10, [])
 
   end
 
