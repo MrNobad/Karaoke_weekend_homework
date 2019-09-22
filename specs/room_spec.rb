@@ -15,9 +15,9 @@ class RoomTest < MiniTest::Test
     @guest2 = Guests.new("Michael", 100, "Pop")
     @guest3 = Guests.new("George", 120, "Rock")
 
-    @disco_balls = Room.new("Disco Balls", "", "Disco", 2, [], 5.00)
-    @balad_heaven = Room.new("Balad Heaven", "", "Pop", 3, [], 5.00)
-    @rocking_room  = Room.new("Rocking Room", "", "Rock", 1, [], 7.00)
+    @disco_balls = Room.new("Disco Balls", "", "Disco", 2, [], 100, 5.00)
+    @balad_heaven = Room.new("Balad Heaven", "", "Pop", 3, [], 100, 5.00)
+    @rocking_room  = Room.new("Rocking Room", "", "Rock", 1, [], 100, 7.00)
 
 
   end
@@ -56,7 +56,11 @@ def test_admit_guest()
     assert_equal("Sorry Full!", @disco_balls.admit_guest(""))
   end
 
-  
+  def test_guest_can_pay_entry_fee
+    @guest1.pay_fee(@disco_balls)
+    assert_equal(105, @disco_balls.till())
+  end
+
   # def test_customer_can_enter_room
   #   @disco_balls.add_guest(@guest1)
   #   @disco_balls.enter_room(@guests, @fee)

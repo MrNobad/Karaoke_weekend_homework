@@ -7,7 +7,7 @@ class GuestsTest < MiniTest::Test
 
   def setup
     @guest = Guests.new("Madonna", 50.00, "Disco")
-    @disco_balls = Room.new("Disco Balls", "", "Disco", 2, [], 5.00)
+    @disco_balls = Room.new("Disco Balls", "", "Disco", 2, [], 100, 5.00)
   end
 
   def test_customer_has_name
