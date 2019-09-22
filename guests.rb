@@ -9,9 +9,9 @@ class Guests
     # @class = 0
   end
 
-  # def buy(drink)
-  #   @wallet -= drink.price()
-  # end
+  def buy(drink)
+    @wallet -= drink.price()
+  end
 
   def pay_fee(room)
     @wallet -= room.fee()

@@ -1,15 +1,14 @@
 class Room
 
-  attr_reader :name, :songs, :guests, :genre, :capacity, :till, :fee
+  attr_reader :name, :songs, :guests, :genre, :capacity, :fee
 
-  def initialize(name, songs, guests, genre, capacity, till, fee)
+  def initialize(name, songs, guests, genre, capacity, fee)
 
     @name = name
     @songs = []
     @guests = []
     @genre = genre
     @capacity = capacity
-    @till = till
     @fee = fee
 
   end
@@ -40,11 +39,6 @@ class Room
     if @guests.count >= @capacity.count
     return "Sorry Full!"
   end
-  end
-
-
-  def pay_fee(room)
-    @till -= room.fee()
   end
 
 end

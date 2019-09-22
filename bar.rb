@@ -21,4 +21,9 @@ attr_reader :till
     guest.buy(drink)
     @till += drink.price()
   end
+
+  def pay_entry_fee(guest, room)
+    guest.pay_fee(room)
+    @till += room.fee()
+  end
 end
