@@ -37,6 +37,6 @@ class PubTest < MiniTest::Test
     @disco_balls.add_guest(@guest1)
     @guest1.pay_fee(@disco_balls)
     assert_equal(5.00, @guest1.wallet())
-    assert_equal(205, @bar.till())
+    assert_equal(205.00, @bar.till())
   end
 end

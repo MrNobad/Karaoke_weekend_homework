@@ -35,7 +35,7 @@ class Room
 
 # This is wrong, I know.
   def admit_guest(room)
-    # @guests.first(@capacity)
+    # @guests.take(@capacity)
     if @guests.count >= @capacity.count
     return "Sorry Full!"
   end
